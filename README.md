@@ -4,6 +4,9 @@ A modern, clean weather forecast application built with React, JavaScript, and T
 
 View current weather conditions and hourly forecasts for any location worldwide.
 
+**[View Live App](https://bearly-raining.netlify.app/)**
+
+
 ![BearlyRaining App Screenshot](./ScreenshotBearlyRaining.png)
 
 ## Features
@@ -87,6 +90,49 @@ This project uses the [Open-Meteo API](https://open-meteo.com/) for weather data
 - Weather maps visualization
 - Dark mode toggle
 - Weather jokes
+
+## Project Structure
+```
+bearly-raining/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── CurrentWeather.jsx
+│   │   ├── DatePicker.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── HourlyCard.jsx
+│   │   ├── HourlyForecast.jsx
+│   │   └── LocationSearch.jsx
+│   ├── services/
+│   │   ├── test/
+│   │   │   └── weatherService.test.js
+│   │   └── weatherService.js
+│   ├── test/
+│   │   └── components/
+│   │       ├── CurrentWeather.test.js
+│   │       ├── DatePicker.test.js
+│   │       ├── Footer.test.js
+│   │       ├── Header.test.js
+│   │       ├── HourlyCard.test.js
+│   │       ├── HourlyForecast.test.js
+│   │       └── LocationSearch.test.js
+│   ├── utils/
+│   │   ├── test/
+│   │   │   └── weatherUtils.test.js
+│   │   └── weatherUtils.js
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── setupTests.js
+├── component-tree.png
+├── planning.md
+├── ScreenshotBearlyRaining.png
+├── wireframe.png
+├── README.md
+├── jest.config.js
+└── package.json
+```
 
 ## Author
 
