@@ -1,9 +1,11 @@
-import HourlyCard from './HourlyCard';
+import HourlyCard from "./HourlyCard";
 
 function HourlyForecast({ hourlyData }) {
   if (!hourlyData) return null;
 
-  const next24Hours = hourlyData.time.slice(0, 24);
+  const next24Hours = hourlyData.slice(0, 24);
+
+  console.log(next24Hours);
 
   return (
     <div className="mt-8 max-w-6xl mx-auto">
@@ -12,12 +14,12 @@ function HourlyForecast({ hourlyData }) {
       </h2>
       <div className="overflow-x-auto pb-4">
         <div className="flex gap-4">
-          {next24Hours.map((time, index) => (
+          {next24Hours.map((hourlyData, index) => (
             <HourlyCard
-              key={time}
-              time={time}
-              temp={hourlyData.temperature_2m[index]}
-              weatherCode={hourlyData.weather_code[index]}
+              key={hourlyData}
+              time={hourlyData.time}
+              temp={hourlyData.temperature}
+              weatherCode={hourlyData.weatherCode}
             />
           ))}
         </div>
