@@ -1,6 +1,5 @@
 const BASE_URL = 'https://api.open-meteo.com/v1/forecast';
 
-// fetches weather data for given latitude/longitude from Open-Meteo API
 export const getWeatherData = async (latitude, longitude) => {
   try {
     const params = new URLSearchParams({
