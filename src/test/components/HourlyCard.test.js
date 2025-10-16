@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import HourlyCard from "../../components/HourlyCard";
 import {
@@ -16,12 +15,11 @@ jest.mock("../../utils/weatherUtils", () => ({
 describe("HourlyCard Component", () => {
   const mockTime = "2025-10-16T14:00:00Z";
   const mockTemp = 18.4;
-  const mockWeatherCode = 0;  // Changed to valid code
-
+  const mockWeatherCode = 0; 
   beforeEach(() => {
     jest.clearAllMocks();
-    formatTime.mockReturnValue("14:00");  // Changed to match actual format
-    getWeatherEmoji.mockReturnValue("☀️");  // Changed to actual emoji
+    formatTime.mockReturnValue("14:00");  
+    getWeatherEmoji.mockReturnValue("☀️");  
     getWeatherDescription.mockReturnValue("Clear sky");
   });
 

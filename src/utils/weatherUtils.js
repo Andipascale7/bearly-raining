@@ -1,4 +1,3 @@
-// Converts  weather codes to understandable  descriptions
 export const getWeatherDescription = (code) => {
   const weatherCodes = {
     0: 'Clear sky',
@@ -34,7 +33,6 @@ export const getWeatherDescription = (code) => {
   return weatherCodes[code] || 'Unknown';
 };
 
-// Gets appropriate emoji for weather code
 export const getWeatherEmoji = (code) => {
   if (code === 0) return '☀️';
   if (code >= 1 && code <= 3) return '⛅';
@@ -45,7 +43,6 @@ export const getWeatherEmoji = (code) => {
   return '🌤️';
 };
 
-// Formats time from ISO string to readable format
 export const formatTime = (isoString) => {
   const date = new Date(isoString);
   return date.toLocaleTimeString('en-GB', { 
