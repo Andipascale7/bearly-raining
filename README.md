@@ -1,4 +1,4 @@
-# 🐻lyRaining ☔
+# 🐻lyRaining☔
 
 A modern, clean weather forecast application built with React, JavaScript, and Tailwind CSS. 
 
@@ -11,12 +11,12 @@ View current weather conditions and hourly forecasts for any location worldwide.
 
 ## Features
 
-- 🌍 **Location Search** - Search for weather in any city worldwide
-- 🌡️ **Current Weather** - Real-time temperature, conditions, wind speed, and humidity
-- ⏰ **Hourly Forecast** - 24-hour weather forecast with detailed conditions
-- 📅 **Date Selection** - View forecasts for up to 7 days ahead
-- 📱 **Responsive Design** - Works seamlessly on mobile and desktop
-- ⚡ **Fast & Lightweight** - Built with Vite for optimal performance
+- **Location Search** - Search for weather in any city worldwide
+- **Current Weather** - Real-time temperature, conditions, wind speed, and humidity
+- **Hourly Forecast** - 24-hour weather forecast with detailed conditions
+- **Date Selection** - View forecasts for up to 7 days ahead
+- **Responsive Design** - Works seamlessly on mobile and desktop
+- **Fast & Lightweight** - Built with Vite for optimal performance
 
 ## Tech Stack
 
@@ -68,11 +68,6 @@ Unit tests are included for all components using Jest and React Testing Library.
 Run tests:
 ```bash
 npm test
-```
-
-Run tests in watch mode:
-```bash
-npm test -- --watch
 ```
 
 ## API
