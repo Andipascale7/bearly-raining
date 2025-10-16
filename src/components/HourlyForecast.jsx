@@ -5,8 +5,6 @@ function HourlyForecast({ hourlyData }) {
 
   const next24Hours = hourlyData.slice(0, 24);
 
-  console.log(next24Hours);
-
   return (
     <div className="mt-8 max-w-6xl mx-auto">
       <h2 className="text-2xl font-bold text-white mb-4">
@@ -16,7 +14,7 @@ function HourlyForecast({ hourlyData }) {
         <div className="flex gap-4">
           {next24Hours.map((hourlyData, index) => (
             <HourlyCard
-              key={hourlyData}
+              key={index}
               time={hourlyData.time}
               temp={hourlyData.temperature}
               weatherCode={hourlyData.weatherCode}

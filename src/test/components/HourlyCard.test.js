@@ -16,14 +16,12 @@ jest.mock("../../utils/weatherUtils", () => ({
 describe("HourlyCard Component", () => {
   const mockTime = "2025-10-16T14:00:00Z";
   const mockTemp = 18.4;
-  const mockWeatherCode = 100;
+  const mockWeatherCode = 0;  // Changed to valid code
 
   beforeEach(() => {
     jest.clearAllMocks();
-
-
-    formatTime.mockReturnValue("2 PM");
-    getWeatherEmoji.mockReturnValue("☀️");
+    formatTime.mockReturnValue("14:00");  // Changed to match actual format
+    getWeatherEmoji.mockReturnValue("☀️");  // Changed to actual emoji
     getWeatherDescription.mockReturnValue("Clear sky");
   });
 
@@ -40,12 +38,9 @@ describe("HourlyCard Component", () => {
     expect(getWeatherEmoji).toHaveBeenCalledWith(mockWeatherCode);
     expect(getWeatherDescription).toHaveBeenCalledWith(mockWeatherCode);
 
-    expect(screen.getByText("2 PM")).toBeInTheDocument();
-
+    expect(screen.getByText("14:00")).toBeInTheDocument();
     expect(screen.getByText("☀️")).toBeInTheDocument();
-
     expect(screen.getByText("18°C")).toBeInTheDocument();
-
     expect(screen.getByText("Clear sky")).toBeInTheDocument();
   });
 
